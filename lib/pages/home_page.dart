@@ -3,10 +3,22 @@
 import 'package:br/pages/home_controller.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 
-  var controller = HomeController();
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var controller;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = HomeController();
+  }
 
   @override
   Widget build(BuildContext context) {
