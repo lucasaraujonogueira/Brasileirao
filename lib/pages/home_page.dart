@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:br/models/time.dart';
 import 'package:br/pages/home_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       body: ListView.separated(
         itemCount: controller.tabela.length,
         itemBuilder: (BuildContext context, int i) {
-          final tabela = controller.tabela;
+          final List<Time> tabela = controller.tabela;
           return ListTile(
             leading: Image.network(tabela[i].brasao),
             title: Text(tabela[i].nome),
